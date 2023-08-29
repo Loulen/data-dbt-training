@@ -22,7 +22,7 @@ select
     , payment_method
     , amount
     , created_at
-    , dishes_ids
+    {# , dishes_ids #}
 from
     add_fake_id as b
 , lateral flatten(input => b.dishes_names) as n

@@ -19,12 +19,12 @@ with cleaned_flat as (
         , c.payment_method
         , c.amount
         , c.created_at
-        , c.dishes_ids
+        {# , c.dishes_ids #}
     from
         cleaned_flat as c
     inner join
         dishes as d
-        on c.dish_name = d.name
+        on c."dish_name" = d.name
 )
 
 , final as (
@@ -34,11 +34,11 @@ with cleaned_flat as (
         , any_value(payment_method) as payment_method
         , any_value(amount) as amount
         , any_value(created_at) as created_at
-        , any_value(dishes_ids) as true_dishes_ids
+        {# , any_value(dishes_ids) as true_dishes_ids #}
     from
         dish_ids
     group by
         fake_id
 )
 
-select * from dish_ids
+select * from final

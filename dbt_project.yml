@@ -49,3 +49,6 @@ seeds:
     schema: source
     # to allow for lowercase
     +quote_columns: true
+
+vars:
+  dry_run: True
