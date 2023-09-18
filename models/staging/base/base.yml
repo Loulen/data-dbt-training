@@ -1,9 +1,0 @@
-version: 2
-
-models:
-  - name: base_dishes
-    description: Selecting from source dishes
-  - name: base_orders 
-    description: Selecting from source orders
-  - name: base_restaurants
-    description: Selecting from source restaurants
