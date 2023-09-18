@@ -1,11 +1,3 @@
-{{
-  config(
-    materialized='incremental',
-    incremental_strategy='delete+insert',
-    unique_key=['identifier','hour']
-  )
-}}
-
 select 
     d.identifier                                           as identifier
     , d.name                                               as name
@@ -18,8 +10,4 @@ from
 left join 
     {{ref('base_dishes')}} as d
         on odf.dishes_id = d.identifier
-{% if is_incremental() %}
-    -- this filter will only be applied on an incremental run
-    where hour > (select max(hour) from {{ this }})
-{% endif %}
 group by 1,2,6
