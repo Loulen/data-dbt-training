@@ -3,7 +3,7 @@ select
     , d.name                                               as name
     , count(*)                                             as nb_ordered
     , sum(d.selling_price)                                 as global_turnover
-    , sum(d.production_cost)                               as global_profit
+    , sum(d.production_cost - d.selling_price)                               as global_profit
     , date_trunc('hour',to_timestamp(odf.created_at))      as hour
 from 
     {{ref('stg_orders__dishes_flattened')}}   as odf
