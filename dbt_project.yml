@@ -13,6 +13,7 @@ profile: 'data_dbt_training'
 vars:
   # Limit of restaurants in the top
   nb_restaurants_to_show: 3
+  dry_run: True
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -49,6 +50,3 @@ seeds:
     schema: source
     # to allow for lowercase
     +quote_columns: true
-
-vars:
-  dry_run: True

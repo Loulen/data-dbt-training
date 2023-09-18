@@ -1,23 +1,18 @@
-**Welcome** to your dbt training, sponsored by Ippon Technologies!
+**Welcome** to your dbt training, sponsored by Betclic!
 
 
 <p style="text-align:center">
-  <img src="https://blog.ippon.tech/assets/images/EXE_LOGO_IPPON_BLEU_KLEIN_RVB.svg?v=89c450c2ed" width="238" />
   <img src="https://i.pinimg.com/originals/d7/2f/41/d72f41d6eb099a8fa0ef2791ad2b18a7.png" width="200" />
 </p>
 <br>
 
 To begin with :
-* Validate your Snowflake credentials (alert your instructor if not received)
-* Create a free dbt Cloud personnal account (using your ippon mail address)
-* Sign into a GitHub account (using your ippon mail address)
-* Make a fork of this project on your own GitHub account so you can start developping
+* Validate your [Snowflake](https://tg80962.eu-west-1.snowflakecomputing.com) credentials (ask [DataPlatform](https://teams.microsoft.com/l/channel/19%3a38e573deab3d427dab78b94b2d749854%40thread.tacv2/Data%2520Fabric%2520(BI%252C%2520Data%2520Platform%252C%2520Governance)?groupId=63a6715f-dc2f-4c00-9f21-35c312d1e657&tenantId=349cb0f5-cf5b-4f4c-89f1-e13af5555b16) if you don't have them yet)
+* Make a fork of **only the base branch** of this project on your own GitHub account so you can start developping
 
 <br>
 
-The training is branch based and each branch _scenario\_*_ corresponds to the **solution** of its associated scenario.
-
-To start the training, please use the *base* branch.
+The training is branch based and each branch _scenario\_*_ corresponds to the **solution** of its associated scenario. To find the name of the scenario, refer to the [mapping](trainings_mapping.json) at the root of this directory.
 
 <br>
 
