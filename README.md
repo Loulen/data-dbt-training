@@ -16,6 +16,8 @@ The training is branch based and each branch _scenario\_*_ corresponds to the **
 
 <br>
 
+The presentation of the training should be found [here](https://betclic-my.sharepoint.com/:p:/r/personal/j_nadal_betclicgroup_com/Documents/Documents/presentations/dbt-training.pptx?d=wd211d71c31274a658533304960984dfd&csf=1&web=1&e=qOC29B).
+
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
