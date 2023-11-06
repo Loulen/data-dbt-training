@@ -11,3 +11,13 @@ data_dbt_training:
       user: "{{env_var('DBT_ENV_SECRET_USERNAME')}}"
       password: "{{env_var('DBT_ENV_SECRET_PASSWORD')}}"
       warehouse: "{{env_var('DBT_ENV_SECRET_WH_NAME')}}"
+    ci:
+      account: "{{env_var('DBT_ENV_SECRET_ACCOUNT_NAME')}}"
+      type: snowflake
+      database: "{{env_var('DBT_ENV_SECRET_DB_NAME')}}"
+      role: "{{env_var('DBT_ENV_SECRET_ROLE_NAME')}}"
+      schema: "{{env_var('DBT_ENV_SECRET_SCHEMA_NAME')}}"
+      threads: 4
+      user: "{{env_var('DBT_ENV_SECRET_USERNAME')}}"
+      password: "{{env_var('DBT_ENV_SECRET_PASSWORD')}}"
+      warehouse: "{{env_var('DBT_ENV_SECRET_WH_NAME')}}"

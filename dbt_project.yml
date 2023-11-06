@@ -39,14 +39,3 @@ models:
     staging:
       +materialized: ephemeral
 
-seeds:
-  data_dbt_training:
-    schema: source
-    # to allow for lowercase
-    +quote_columns: true
-
-# Variables
-vars:
-  # Limit of restaurants in the top
-  nb_restaurants_to_show: 3
-  dry_run: True
