@@ -16,7 +16,7 @@ data_dbt_training:
       type: snowflake
       database: "{{env_var('DBT_DB_NAME')}}"
       role: "{{env_var('DBT_ROLE_NAME')}}"
-      schema: "{{env_var('DBT_SCHEMA_NAME')}}"
+      schema: "{{env_var('DBT_SCHEMA_NAME')}}_CI"
       threads: 4
       user: "{{env_var('DBT_USERNAME')}}"
       password: "{{env_var('DBT_ENV_SECRET_PASSWORD')}}"
