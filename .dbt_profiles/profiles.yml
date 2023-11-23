@@ -4,20 +4,30 @@ data_dbt_training:
     dev:
       account: "{{env_var('DBT_ENV_SECRET_ACCOUNT_NAME')}}"
       type: snowflake
-      database: "{{env_var('DBT_ENV_SECRET_DB_NAME')}}"
-      role: "{{env_var('DBT_ENV_SECRET_ROLE_NAME')}}"
-      schema: "{{env_var('DBT_ENV_SECRET_SCHEMA_NAME')}}"
+      database: "{{env_var('DBT_DB_NAME')}}"
+      role: "{{env_var('DBT_ROLE_NAME')}}"
+      schema: "{{env_var('DBT_SCHEMA_NAME')}}"
       threads: 4
-      user: "{{env_var('DBT_ENV_SECRET_USERNAME')}}"
+      user: "{{env_var('DBT_USERNAME')}}"
       password: "{{env_var('DBT_ENV_SECRET_PASSWORD')}}"
-      warehouse: "{{env_var('DBT_ENV_SECRET_WH_NAME')}}"
+      warehouse: "{{env_var('DBT_WH_NAME')}}"
     ci:
       account: "{{env_var('DBT_ENV_SECRET_ACCOUNT_NAME')}}"
       type: snowflake
-      database: "{{env_var('DBT_ENV_SECRET_DB_NAME')}}"
-      role: "{{env_var('DBT_ENV_SECRET_ROLE_NAME')}}"
-      schema: "{{env_var('DBT_ENV_SECRET_SCHEMA_NAME')}}"
+      database: "{{env_var('DBT_DB_NAME')}}"
+      role: "{{env_var('DBT_ROLE_NAME')}}"
+      schema: "{{env_var('DBT_SCHEMA_NAME')}}"
       threads: 4
-      user: "{{env_var('DBT_ENV_SECRET_USERNAME')}}"
+      user: "{{env_var('DBT_USERNAME')}}"
       password: "{{env_var('DBT_ENV_SECRET_PASSWORD')}}"
-      warehouse: "{{env_var('DBT_ENV_SECRET_WH_NAME')}}"
+      warehouse: "{{env_var('DBT_WH_NAME')}}"
+    prod:
+      account: "{{env_var('DBT_ENV_SECRET_ACCOUNT_NAME')}}"
+      type: snowflake
+      database: "{{env_var('DBT_DB_NAME_PROD')}}"
+      role: "{{env_var('DBT_ROLE_NAME_PROD')}}"
+      schema: "{{env_var('DBT_SCHEMA_NAME_PROD')}}"
+      threads: 4
+      user: "{{env_var('DBT_USERNAME_PROD')}}"
+      password: "{{env_var('DBT_ENV_SECRET_PASSWORD')}}"
+      warehouse: "{{env_var('DBT_WH_NAME_PROD')}}"
