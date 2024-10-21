@@ -1,0 +1,46 @@
+models:
+  - name: restaurants__benefit_orders_hourly
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('sample_restaurants__benefit_orders_hourly')
+          tags: ['unit_testing']
+
+unit_tests:
+  - name: test_group_by_sum
+    model: restaurants__benefit_orders_hourly
+    overrides:
+      macros:
+        # unit test this model in "full refresh" mode
+        is_incremental: false 
+    given:
+      - input: ref('base_dishes')
+        format: sql
+        rows: |
+          select 1 as identifier, 'Tarte au citron' as name, 6 as selling_price, 4 as production_cost, (6 - 4) as benefit
+          union all
+          select 2 as identifier, 'Demi peche' as name, 4 as selling_price, 2.5 as production_cost, (4 - 2.5) as benefit
+
+      - input: ref('base_orders')
+        format: sql
+        rows: |
+          select '[1]' as dishes_ids, '2022-05-01T20:00:00Z' as created_at
+          union all
+          select '[2]' as dishes_ids, '2022-04-09T17:00:00Z' as created_at
+          union all
+          select '[1]' as dishes_ids, '2022-05-01T20:00:00Z' as created_at
+
+    expect:
+      rows:
+        - identifier: 1
+          name: 'Tarte au citron'
+          hour: '2022-05-01T20:00:00Z'
+          hourly_turnover: 12    # (6 + 6)
+          hourly_benefit: 4      # (2 + 2)
+          hourly_production_cost: 8  # (4 + 4)
+
+        - identifier: 2
+          name: 'Demi peche'
+          hour: '2022-04-09T17:00:00Z'
+          hourly_turnover: 4
+          hourly_benefit: 1.5
+          hourly_production_cost: 2.5

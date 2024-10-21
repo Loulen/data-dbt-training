@@ -1,0 +1,13 @@
+models:
+  - name: restaurants__turnover_ordered
+    columns:
+      - name: restaurant_id
+      - name: name
+        tests:
+          - unique
+      - name: address
+      - name: nb_employees
+      - name: open_on_sunday
+      - name: total_turnover
+        tests:
+          - is_positive

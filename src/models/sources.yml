@@ -1,0 +1,24 @@
+sources:
+  - name: "source"
+    database: |
+        {%- set target_name = target.name.lower() -%}
+        {%- if target_name in ['prod'] -%} DB_DBT_LLENOIR_PROD
+        {%- else -%} DB_DBT_LLENOIR_DEV
+        {%- endif -%}
+    tables:
+      - name: restaurants
+      - name: orders
+        columns:
+          - name: identifier
+            tests:
+              - unique:
+                  config:
+                    severity: warn
+          - name: amount
+            tests:
+              - is_positive
+      - name: dishes
+      
+
+       
+    
