@@ -10,6 +10,7 @@ data_dbt_training:
       threads: 4
       user: "{{env_var('DBT_USERNAME')}}"
       password: "{{env_var('DBT_ENV_SECRET_PASSWORD')}}"
+      authenticator: username_password_mfa
       warehouse: "{{env_var('DBT_WH_NAME')}}"
     ci:
       account: "{{env_var('DBT_ENV_SECRET_ACCOUNT_NAME')}}"
@@ -20,6 +21,7 @@ data_dbt_training:
       threads: 4
       user: "{{env_var('DBT_USERNAME')}}"
       password: "{{env_var('DBT_ENV_SECRET_PASSWORD')}}"
+      authenticator: username_password_mfa
       warehouse: "{{env_var('DBT_WH_NAME')}}"
     prod:
       account: "{{env_var('DBT_ENV_SECRET_ACCOUNT_NAME')}}"
@@ -30,4 +32,19 @@ data_dbt_training:
       threads: 4
       user: "{{env_var('DBT_USERNAME_PROD')}}"
       password: "{{env_var('DBT_ENV_SECRET_PASSWORD')}}"
+      authenticator: username_password_mfa
       warehouse: "{{env_var('DBT_WH_NAME_PROD')}}"
+
+elementary:
+  outputs:
+    default:
+      account: "{{env_var('DBT_ENV_SECRET_ACCOUNT_NAME')}}"
+      type: snowflake
+      database: "{{env_var('DBT_DB_NAME_PROD')}}"
+      role: "{{env_var('DBT_ROLE_NAME_PROD')}}"
+      schema: "dbt_llenoir_elementary"
+      threads: 4
+      user: "{{env_var('DBT_USERNAME_PROD')}}"
+      password: "{{env_var('DBT_ENV_SECRET_PASSWORD')}}"
+      warehouse: "{{env_var('DBT_WH_NAME_PROD')}}"
+

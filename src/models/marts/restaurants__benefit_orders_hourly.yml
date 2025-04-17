@@ -44,3 +44,5 @@ unit_tests:
           hourly_turnover: 4
           hourly_benefit: 1.5
           hourly_production_cost: 2.5
+
+      

@@ -3,10 +3,12 @@ sources:
     database: |
         {%- set target_name = target.name.lower() -%}
         {%- if target_name in ['prod'] -%} DB_DBT_LLENOIR_PROD
-        {%- else -%} DB_DBT_LLENOIR_DEV
+        {%- else -%} LLENOIR_DB
         {%- endif -%}
     tables:
       - name: restaurants
+      - name: dishes
+      - name: fuzzy_orders
       - name: orders
         columns:
           - name: identifier
@@ -17,7 +19,13 @@ sources:
           - name: amount
             tests:
               - is_positive
-      - name: dishes
+      - name: |
+          {%- set target_name = target.name.lower() -%}
+          {%- if target_name in ['prod'] -%} STAGE_DBT_LLENOIR_PROD
+          {%- else -%} LLENOIR_DB
+          {%- endif -%}
+      - name: stream_orders
+
       
 
        

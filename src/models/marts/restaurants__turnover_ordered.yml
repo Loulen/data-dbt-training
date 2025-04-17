@@ -11,3 +11,11 @@ models:
       - name: total_turnover
         tests:
           - is_positive
+
+exposures:
+  - name: top_restaurants_by_turnover_export
+    description: "Top restaurants by turnover exported in a bucket"
+    type: application
+    owner:
+      name: llenoir
+    

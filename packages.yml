@@ -1,3 +1,7 @@
 packages:
   - package: dbt-labs/dbt_utils
     version: 1.3.0
+  - git: https://gitlab.ippon.fr/jnadal/dbt-ippon-utils 
+    revision: 6b5e1e9f0899cd21ffeceb8adeabb9298b53d4bd
+  - package: elementary-data/elementary
+    version: 0.15.2

@@ -33,6 +33,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   data_dbt_training:
+    +pre-hook: '{{ dbt_ippon_utils.add_query_tags(target.name.lower()~":model:"~this) }}'
     # Config indicated by + and applies to all files under models/marts/
     marts:
       +materialized: table
@@ -40,10 +41,19 @@ models:
     staging:
       +materialized: ephemeral
       schema: silver
+  elementary:
+    schema: elementary
+    +enabled: "{{ target.name in ['dev','prod'] }}"
+
 seeds:
   schema: seeds
 unit_tests:
   tags: ['unit_testing']
 
 vars:
-  nb_restaurants_to_show: 2
+  nb_restaurants_to_show: 100
+  is_backload: true
+
+dispatch:
+  - macro_namespace: dbt
+    search_order: [data_dbt_training, dbt_ippon_utils, dbt]

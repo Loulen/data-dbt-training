@@ -8,3 +8,4 @@ venv/
 .venv/
 .dbt_profiles/.user.yml
 .envrc
+edr_target/
