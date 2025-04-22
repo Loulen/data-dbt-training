@@ -1,3 +1,16 @@
 IDENTIFIER,NAME,ADDRESS,NB_EMPLOYEES,OPEN_ON_SUNDAY
-3,Chez tjumeaux,Avenue de la Grande Armee - Paris,2,true
-7,Chez siribarne,Allees de Tourny - Bordeaux,10,true
+3,Chez tjumeaux,Avenue de la Grande Armee - Paris,2,True
+7,Chez siribarne,Allees de Tourny - Bordeaux,10,True
+8,Le Gourmand 8,Boulevard Jean Jaures - Strasbourg,13,False
+9,La Rapide 9,Place Foch - Lyon,9,False
+10,Le Gourmand 10,Boulevard Thiers - Marseille,6,False
+11,La Traditionnel 11,Rue Pasteur - Lyon,7,True
+12,Le Provencal 12,Rue Pasteur - Strasbourg,11,False
+13,Au du Marche 13,Boulevard Jean Jaures - Lyon,7,False
+14,Au Breton 14,Avenue Pasteur - Lille,11,False
+15,Au Savoyard 15,Place Pasteur - Strasbourg,11,True
+16,Restaurant du Marche 16,Place Thiers - Montpellier,5,True
+17,Le Rapide 17,Avenue Pasteur - Marseille,11,True
+18,Restaurant Savoyard 18,Avenue Pasteur - Nice,7,False
+19,Au Gourmand 19,Boulevard Victor Hugo - Lille,8,False
+20,Le Savoyard 20,Boulevard Jean Jaures - Nice,7,True

@@ -2,3 +2,75 @@ IDENTIFIER,NAME,SELLING_PRICE,PRODUCTION_COST,TYPE
 3,Demi peche,4,2.5,boisson
 9,Flammkueche au munster,10,5,plat
 18,Tarte au citron,6,4,dessert
+19,Legumes Composee 19,4.96,2.7,boisson
+20,Gratin Meuniere 20,15.12,7.25,accompagnement
+21,Pates Verte 21,16.34,6.85,accompagnement
+22,Boeuf Carbonara 22,8.81,3.66,entree
+23,Vin Bourguignon 23,5.0,2.44,boisson
+24,Pates Vanille 24,6.69,3.44,dessert
+25,Glace Basmati 25,4.45,2.33,boisson
+26,Cafe Sautes 26,10.07,3.22,accompagnement
+27,Glace Roti 27,8.01,4.03,entree
+28,Cafe Chocolat 28,11.09,6.06,entree
+29,Cafe Chocolat 29,2.53,1.02,boisson
+30,Riz Chocolat 30,8.72,4.31,entree
+31,Poulet Gourmand 31,17.47,5.62,plat
+32,Poisson Sautes 32,13.67,5.79,accompagnement
+33,Riz Carbonara 33,20.6,6.54,plat
+34,Riz Rouge 34,17.07,8.19,plat
+35,Legumes Roti 35,10.46,4.94,dessert
+36,Jus Composee 36,7.19,3.89,entree
+37,Soupe du Jour 37,19.31,7.2,accompagnement
+38,Gratin Composee 38,19.75,7.17,accompagnement
+39,Cafe Blonde 39,11.19,6.7,entree
+40,Soupe Dauphinois 40,21.93,8.55,accompagnement
+41,Poisson du Jour 41,8.54,4.76,entree
+42,The Orange 42,8.13,4.1,entree
+43,The Dauphinois 43,18.23,6.61,plat
+44,Pates du Jour 44,24.75,11.33,plat
+45,Riz Basmati 45,21.76,8.3,plat
+46,Riz Orange 46,12.94,4.86,plat
+47,Poisson Roti 47,11.71,4.74,dessert
+48,Vin Chocolat 48,5.57,2.44,dessert
+49,Tarte Chocolat 49,7.25,4.02,entree
+50,Cafe Chocolat 50,5.93,2.67,dessert
+51,Jus Composee 51,7.88,3.23,dessert
+52,Cafe Carbonara 52,7.11,3.19,entree
+53,Riz Meuniere 53,13.59,5.19,accompagnement
+54,Glace du Jour 54,9.77,4.78,entree
+55,Mousse Gourmand 55,6.49,2.73,entree
+56,Boeuf Chocolat 56,5.56,2.22,boisson
+57,Gratin Carbonara 57,8.81,5.12,entree
+58,Soupe Composee 58,5.54,2.59,boisson
+59,Gratin Basmati 59,11.16,4.58,entree
+60,Biere Blonde 60,13.04,4.74,accompagnement
+61,Cafe Pommes 61,19.07,6.63,plat
+62,The Vanille 62,10.57,5.8,dessert
+63,Glace Vert 63,11.08,5.26,entree
+64,Biere Roti 64,7.52,3.01,dessert
+65,Salade du Jour 65,5.47,2.56,entree
+66,Poisson Meuniere 66,10.88,5.39,plat
+67,Cafe Chocolat 67,19.08,8.1,accompagnement
+68,Cafe Composee 68,4.01,2.6,boisson
+69,Riz Rouge 69,11.56,5.96,entree
+70,Tarte Pommes 70,24.86,8.53,plat
+71,Vin Dauphinois 71,8.93,4.52,dessert
+72,Jus Bourguignon 72,7.95,4.32,dessert
+73,Cafe Dauphinois 73,2.61,0.89,boisson
+74,Riz Vanille 74,13.06,5.37,accompagnement
+75,Poisson Chocolat 75,10.77,4.98,dessert
+76,Glace Pommes 76,11.67,4.87,entree
+77,Salade Verte 77,17.38,7.06,plat
+78,Tarte Vert 78,10.25,4.11,entree
+79,Biere Sautes 79,16.71,5.65,plat
+80,Jus Rouge 80,2.24,0.86,boisson
+81,Legumes Blonde 81,20.0,9.95,accompagnement
+82,The Dauphinois 82,7.37,3.33,dessert
+83,Legumes Vert 83,7.75,4.02,dessert
+84,The Dauphinois 84,7.86,3.49,dessert
+85,Tarte Orange 85,8.44,4.71,entree
+86,Vin Orange 86,11.49,5.17,accompagnement
+87,Poisson Bourguignon 87,3.46,1.21,boisson
+88,Legumes Vanille 88,4.2,1.53,boisson
+89,Legumes Sautes 89,11.55,6.29,dessert
+90,Poisson Basmati 90,9.84,3.99,dessert
