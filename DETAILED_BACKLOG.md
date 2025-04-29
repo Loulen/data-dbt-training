@@ -3,6 +3,49 @@
 ## Not Started
 
 ---
+### Task 3: Create `fct_restaurant_daily_summary` Gold Table
+
+*   **Objective:** Create a fact table `fct_restaurant_daily_summary` in the `gold` schema aggregating key performance metrics per restaurant per day.
+*   **Context:**
+    *   Purpose: Enable analysis of restaurant performance trends over time.
+    *   Sources: Primarily `stg_restaurants__turnover`. May require joining with a stable restaurant dimension if needed (e.g., `base_restaurants` or `stg_restaurants__replace_fuzzy`).
+    *   Schema: `gold` (Ensure model is configured to materialize in this schema). **Note:** User accepted materialization in `silver` schema (`dbt_llenoir_silver`).
+    *   Granularity: `restaurant_id`, `date`.
+    *   Metrics: Calculate `total_orders`, `total_revenue`, `average_order_value`.
+    *   Model Type: Table
+    *   Location: `src/models/marts/fct_restaurant_daily_summary.sql` (Actual location)
+*   **Acceptance Criteria (Custom):**
+    *   Execute `dbt run --select fct_restaurant_daily_summary`. (Completed)
+    *   Query the resulting `dbt_llenoir_silver.fct_restaurant_daily_summary` table. (Completed)
+    *   Verify:
+        *   Table exists in the `dbt_llenoir_silver` schema. 
+        *   Contains expected columns (`RESTAURANT_ID`, `DATE`, `TOTAL_ORDERS`, `TOTAL_REVENUE`, `AVERAGE_ORDER_VALUE`). 
+        *   Metrics appear reasonable upon spot-checking against source data for a known restaurant/day. (Requires manual check if needed)
+        *   The grain (`restaurant_id`, `date`) is unique. (Requires manual check if needed)
+
+---
+
+### Task 4: Create `fct_dish_popularity_daily` Table
+
+*   **Objective:** Create a fact table `fct_dish_popularity_daily` tracking sales metrics per dish per day.
+*   **Context:**
+    *   Purpose: Enable analysis of dish popularity and revenue contribution over time.
+    *   Sources: Combined data from `stg_restaurants__dishes_flatten` and `stg_restaurants__turnover`.
+    *   Schema: `dbt_llenoir_silver` (Actual schema used).
+    *   Granularity: `dish_id`, `date`.
+    *   Metrics: Calculated `total_quantity_ordered`, `total_revenue`.
+    *   Model Type: Table
+    *   Location: `src/models/marts/fct_dish_popularity_daily.sql` (Actual location).
+*   **Acceptance Criteria (Custom):**
+    *   Execute `dbt run --select fct_dish_popularity_daily`. (Completed)
+    *   Query the resulting `dbt_llenoir_silver.fct_dish_popularity_daily` table. (Completed)
+    *   Verify:
+        *   Table exists in the `dbt_llenoir_silver` schema. 
+        *   Contains expected columns (`DISH_ID`, `DATE`, `TOTAL_QUANTITY_ORDERED`, `TOTAL_REVENUE`). 
+        *   Metrics appear reasonable upon spot-checking. 
+        *   The grain (`dish_id`, `date`) is unique. 
+
+---
 
 ## In Progress
 
@@ -46,3 +89,4 @@
     *   Verify that the terminal output displays the correct number of rows (default 10, or the specified limit) and columns from the target model in a readable format.
 
 ---
+
